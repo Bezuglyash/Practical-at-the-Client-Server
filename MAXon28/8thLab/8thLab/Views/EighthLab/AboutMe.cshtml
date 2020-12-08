@@ -1,0 +1,42 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html>
+<head>
+    <title>Обо мне | MAXon28</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/aboutMe.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+</head>
+<body>
+    <header>
+        <div class="div-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="selectA" style="text-decoration: none;" asp-area="" asp-controller="EighthLab" asp-action="AboutMe">Обо мне</a>
+                    </li>
+                    <li>
+                        <a class="notSelectA" style="text-decoration: none;" asp-area="" asp-controller="EighthLab" asp-action="IndividualTask">Индивидуальное задание</a>
+                    </li>
+                    <li>
+                        <a class="notSelectA" style="text-decoration: none;" asp-area="" asp-controller="EighthLab" asp-action="Table">Машины</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h1>Работу выполнил: Безуглый Максим</h1>
+            <h1>Номер группы: ИКБО-16-18</h1>
+            <h1>Номер индивидуального задания: 1</h1>
+            <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;Текст индивидуального задания: "Найти максимальное значение среди множества чисел (без использования
+                класса Math). Числа должны поступать в виде строки с некоторым разделителем
+                (пример: «11, 32, 1, 22, 14»); в массиве; списком чисел.
+            </h2>
+        </div>
+    </div>
+</body>
+</html>
