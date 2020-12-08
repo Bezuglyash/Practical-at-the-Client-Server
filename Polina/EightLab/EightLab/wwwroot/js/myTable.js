@@ -52,7 +52,7 @@ function SaveClick() {
                                 <td id="name-${lastId}" class="text-center">${name}</td>
                                 <td id="manufacturer-${lastId}" class="text-center">${manufacturer}</td>
                                 <td id="filling-${lastId}" class="text-center">${filling}</td>
-                                <td class="text-center">
+                                <td class="text-center" style="text-align: center;">
                                     <button style="color: blue;" onclick="EditClick(${lastId})">Изменить</button>
                                     <button style="color: red;" onclick="DeleteClick(${lastId})">Удалить</button>
                                 </td>
