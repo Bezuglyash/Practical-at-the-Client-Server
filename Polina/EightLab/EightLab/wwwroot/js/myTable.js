@@ -1,58 +1,57 @@
 ﻿window.onload = init;
 var lastId = 0;
 var currentId;
-var currentAction = "";
+var action = "";
 
 function init() {
     lastId = $(".table tr:last").attr("id");
 };
 
 function AddClick() {
-    currentAction = "Add";
+    action = "Add";
     $("#name").val("");
-    $("#author").val("");
-    $("#genre").val("");
+    $("#manufacturer").val("");
+    $("#filling").val("");
     $(".edit").fadeIn();
 }
 
 function EditClick(id) {
-    currentAction = "Edit";
+    action = "Edit";
     $(".edit").fadeIn();
     currentId = id;
     $("#name").val($(`#name-${id}`).html());
-    $("#author").val($(`#author-${id}`).html());
-    $("#genre").val($(`#genre-${id}`).html());
+    $("#manufacturer").val($(`#manufacturer-${id}`).html());
+    $("#filling").val($(`#filling-${id}`).html());
 }
 
 function DeleteClick(id) {
     var name = $(`#name-${id}`).html();
-    var author = $(`#author-${id}`).html();
+    var manufacturer = $(`#manufacturer-${id}`).html();
     $(`#${id}`).remove();
     $.ajax({
         type: "POST",
-        url: "/Site/DeleteBook",
-        data: { name, author },
+        url: "/MySite/DeleteBread",
+        data: { name, manufacturer },
         dataType: ""
     });
 }
 
 function SaveClick() {
-    console.log(currentAction);
     var name = $("#name").val();
-    var author = $("#author").val();
-    var genre = $("#genre").val();
-    if (currentAction == "Add") {
+    var manufacturer = $("#manufacturer").val();
+    var filling = $("#filling").val();
+    if (action == "Add") {
         $.ajax({
             type: "POST",
-            url: "/Site/AddBook",
-            data: { name, author, genre },
+            url: "/MySite/AddBread",
+            data: { name, manufacturer, filling },
             dataType: ""
         });
         lastId = parseInt(lastId) + parseInt(1);;
         $(".table").append(`<tr id="${lastId}">
                                 <td id="name-${lastId}" class="text-center">${name}</td>
-                                <td id="author-${lastId}" class="text-center">${author}</td>
-                                <td id="genre-${lastId}" class="text-center">${genre}</td>
+                                <td id="manufacturer-${lastId}" class="text-center">${manufacturer}</td>
+                                <td id="filling-${lastId}" class="text-center">${filling}</td>
                                 <td class="text-center">
                                     <button style="color: blue;" onclick="EditClick(${lastId})">Изменить</button>
                                     <button style="color: red;" onclick="DeleteClick(${lastId})">Удалить</button>
@@ -63,13 +62,13 @@ function SaveClick() {
     else {
         $.ajax({
             type: "POST",
-            url: "/Site/EditBook",
-            data: { name, author, genre },
+            url: "/MySite/EditBread",
+            data: { name, manufacturer, filling },
             dataType: ""
         });
         $(`#name-${currentId}`).html(name);
-        $(`#author-${currentId}`).html(author);
-        $(`#genre-${currentId}`).html(genre);
+        $(`#manufacturer-${currentId}`).html(manufacturer);
+        $(`#filling-${currentId}`).html(filling);
         $(".edit").fadeOut();
         currentId = -1;
     }

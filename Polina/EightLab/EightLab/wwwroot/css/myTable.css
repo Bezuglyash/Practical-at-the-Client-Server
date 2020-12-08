@@ -1,0 +1,137 @@
+﻿.breads {
+    width: 100%;
+    display: block;
+}
+
+.table {
+    width: 90%;
+    margin-left: 5%;
+    align-self: center;
+    background: rgba(255, 192, 203, 0.55);
+}
+
+.table th {
+    width: 25%;
+    color: white;
+    font-size: 28px;
+    background: #FFC0CB;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.table tr td {
+    width: 28%;
+    font-size: 28px;
+    background: #FFC0CB;
+    color: salmon;
+    font-weight: bolder;
+    margin-top: 0;
+    height: 28px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.table td button {
+    text-align: center;
+    font-size: 19px;
+    background: Salmon;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.table td button:hover {
+    opacity: 0.81;
+}
+
+.addBread {
+    border-radius: 7px;
+    color: LightGoldenrodYellow;
+    background: #FFC0CB;
+    width: 267px;
+    align-self: center;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 67px;
+    outline: none;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+}
+
+.addBread:hover {
+    opacity: 0.55;
+}
+
+.edit {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 28;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(1px);
+    -moz-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    background: rgba(117, 72, 240, 0.28);
+}
+
+.editData {
+    align-self: center;
+    width: 528px;
+    height: 328px;
+    position: fixed;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 19px LightGoldenrodYellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.editData p {
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    color: Salmon;
+    text-align: center;
+}
+
+.editData input {
+    width: 467px;
+    align-self: center;
+    font-size: 28px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #FFC0CB;
+    color: white;
+}
+
+.save {
+    align-self: center;
+    width: 167px;
+    font-size: 28px;
+    padding: 9px 0;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: Salmon;
+}
+
+.save:hover {
+    opacity: 0.67;
+}
