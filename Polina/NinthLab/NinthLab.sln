@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinthLab", "NinthLab\NinthLab.csproj", "{BF1E40A7-D60C-4184-98CF-74EE28798873}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF1E40A7-D60C-4184-98CF-74EE28798873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1E40A7-D60C-4184-98CF-74EE28798873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1E40A7-D60C-4184-98CF-74EE28798873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1E40A7-D60C-4184-98CF-74EE28798873}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A29281C-3195-44FA-9AEA-0F18B2DE87A4}
+	EndGlobalSection
+EndGlobal

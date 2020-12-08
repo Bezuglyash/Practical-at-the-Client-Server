@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NinthLab;
 
 namespace EightLab
 {
     public class MySiteController : Controller
     {
+        private BreadDbWorker _breadDb;
+
+        public MySiteController(BreadDbWorker breadDb)
+        {
+            _breadDb = breadDb;
+        }
+
         [HttpGet]
         public IActionResult MyPage()
         {
@@ -44,49 +53,26 @@ namespace EightLab
         [HttpGet]
         public IActionResult MyTable()
         {
-            var list = new List<Bread>();
-            list.Add(new Bread
-            {
-                Id = 1,
-                Name = "Сдобная",
-                Manufacturer = "СтельмаX",
-                Filling = "-"
-            });
-            list.Add(new Bread
-            {
-                Id = 2,
-                Name = "Слойка",
-                Manufacturer = "СтельмаX",
-                Filling = "Вишня"
-            });
-            list.Add(new Bread
-            {
-                Id = 3,
-                Name = "БулкаБургер",
-                Manufacturer = "СтельмаX",
-                Filling = "Всё подряд"
-            });
-            return View(list);
+            return View(_breadDb.GetBreads());
         }
 
         [HttpPost]
-        public IActionResult AddBread(string name, string manufacturer, string filling)
+        public async Task<int> AddBread(string name, string manufacturer, string filling)
         {
-            //Add
+            return await _breadDb.AddBreadAsync(name, manufacturer, filling);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditBread(int currentId, string name, string manufacturer, string filling)
+        {
+            await _breadDb.UpdateBreadAsync(currentId, name, manufacturer, filling);
             return StatusCode(200);
         }
 
         [HttpPost]
-        public IActionResult EditBread(string name, string manufacturer, string filling)
+        public async Task<IActionResult> DeleteBread(int id)
         {
-            //Edit
-            return StatusCode(200);
-        }
-
-        [HttpPost]
-        public IActionResult DeleteBread(string name, string manufacturer)
-        {
-            //Delete
+            await _breadDb.DeleteBreadAsync(id);
             return StatusCode(200);
         }
     }

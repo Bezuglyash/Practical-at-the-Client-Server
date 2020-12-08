@@ -1,0 +1,46 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html>
+<head>
+    <title>Полина Стельмах</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/myPage.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/myTask.css" />
+</head>
+<body>
+    <header>
+        <div class="div-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="MySite" asp-action="MyPage">Обо мне</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="MySite" asp-action="MyTask">Подсчет одинаковых символов</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="MySite" asp-action="MyTable">Булки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h1>Введите через пробел символы</h1>
+            <input id="str" class="inputNumbers" type="text" />
+            <button class="button" onclick="TaskClick()">Ответ</button>
+            <div id="divAnswer" class="div">
+                <p class="answerText">Ответ:</p>
+                <p id="answer" class="answer"></p>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/myTask.js" asp-append-version="true"></script>
+</body>
+</html>
