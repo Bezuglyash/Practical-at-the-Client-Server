@@ -9,7 +9,7 @@ function SolutionClick() {
     if (stringNumbers != "") {
         $.ajax({
             type: "POST",
-            url: "/Ninth/MaxValue",
+            url: "/TenthLab/MaxValue",
             data: { stringNumbers },
             dataType: "text",
             success: function (answer) {

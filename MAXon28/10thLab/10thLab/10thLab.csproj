@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Scripts\TenthLab\aboutMe.vue" />
-    <Content Include="Scripts\TenthLab\index.js" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
   </ItemGroup>
 
 </Project>

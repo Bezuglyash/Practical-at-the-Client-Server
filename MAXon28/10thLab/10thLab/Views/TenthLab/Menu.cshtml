@@ -1,0 +1,22 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<string>
+<head>
+    <link rel="stylesheet" href="~/css/menu.css" />
+</head>
+<header>
+    <div class="div-menu">
+        <nav>
+            <ul>
+                <li>
+                    <a class="@Model[0]" style="text-decoration: none;" asp-area="" asp-controller="TenthLab" asp-action="AboutMe">Обо мне</a>
+                </li>
+                <li>
+                    <a class="@Model[1]" style="text-decoration: none;" asp-area="" asp-controller="TenthLab" asp-action="IndividualTask">Индивидуальное задание</a>
+                </li>
+                <li>
+                    <a class="@Model[2]" style="text-decoration: none;" asp-area="" asp-controller="TenthLab" asp-action="Table">Машины</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

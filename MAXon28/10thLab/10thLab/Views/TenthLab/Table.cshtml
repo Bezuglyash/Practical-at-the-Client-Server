@@ -1,0 +1,55 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<_10thLab.Models.Car>
+<!doctype html>
+<html>
+<head>
+    <title>Таблица | MAXon28</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/aboutMe.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/table.css" />
+</head>
+<body>
+    @await Html.PartialAsync("Menu", new List<string> { "notSelectA", "notSelectA", "selectA" })
+    <div class="container">
+        <div class="card">
+            <div class="carsContainer">
+                <table class="table">
+                    <tr>
+                        <th class="text-center">Марка</th>
+                        <th class="text-center">Модель</th>
+                        <th class="text-center">Цена</th>
+                        <th class="text-center"></th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="@item.Id">
+                            <td id="name-@item.Id" class="text-center">@item.Name</td>
+                            <td id="model-@item.Id" class="text-center">@item.Model</td>
+                            <td id="price-@item.Id" class="text-center">@item.Price ₽</td>
+                            <td class="text-center">
+                                <button style="color: cyan;" onclick="EditClick(@item.Id)">Изменить</button>
+                                <button style="color: coral;" onclick="DeleteClick(@item.Id)">Удалить</button>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        <button class="addCar" onclick="AddClick()">+</button>
+    </div>
+    <div id="editContainer" class="editContainer" style="display: none;">
+        <div id="editData" class="editData">
+            <input id="name" type="text" placeholder="Марка"/>
+            <input id="model"type="text" placeholder="Модель"/>
+            <input id="price" type="number" placeholder="Цена"/>
+            <button class="buttonSave" onclick="SaveClick()" style="outline: none;">Сохранить</button>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/table.js" asp-append-version="true"></script>
+</body>
+</html>
