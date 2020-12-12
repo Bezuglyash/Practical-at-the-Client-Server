@@ -1,0 +1,137 @@
+﻿.card {
+    width: 928px;
+    border-radius: 9px;
+    box-shadow: 0 0 3.28em -1em #E29930;
+    align-self: center;
+    background: #32384D;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carsContainer {
+    width: 100%;
+    display: block;
+}
+
+.table {
+    width: 100%;
+    align-self: center;
+    background: #32384D;
+}
+
+.table th {
+    width: 25%;
+    color: #217CA3;
+    font-size: 28px;
+    background: #32384D;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table tr td {
+    width: 25%;
+    font-size: 28px;
+    background: #32384D;
+    color: #E29930;
+    margin-top: 0;
+    height: 28px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.table td button {
+    text-align: center;
+    font-size: 19px;
+    background: rgba(33, 31, 48, 0.9);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.table td button:hover {
+    opacity: 0.67;
+}
+
+.addCar {
+    border-radius: 50%;
+    color: green;
+    background: #32384D;
+    width: 67px;
+    height: 67px;
+    align-self: center;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 67px;
+    box-shadow: 0 0 28px -1.28px #E29930;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.addCar:hover {
+    color: #3CB371;
+}
+
+.editContainer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 28;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(3px);
+    -moz-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    background: rgba(135, 206, 250, 0.28);
+}
+
+.editData {
+    align-self: center;
+    width: 528px;
+    height: 328px;
+    position: fixed;
+    border-radius: 5px;
+    background: #32384D;
+    box-shadow: 0 0 19px #E29930;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.editData input {
+    width: 467px;
+    align-self: center;
+    font-size: 28px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.buttonSave {
+    align-self: center;
+    width: 167px;
+    font-size: 28px;
+    padding: 9px 0;
+    color: #217CA3;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(33, 31, 48, 0.9);
+}
+
+.buttonSave:hover {
+    opacity: 0.67;
+}

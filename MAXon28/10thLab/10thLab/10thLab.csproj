@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_10thLab</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Scripts\TenthLab\aboutMe.vue" />
+    <Content Include="Scripts\TenthLab\index.js" />
+  </ItemGroup>
+
+</Project>
