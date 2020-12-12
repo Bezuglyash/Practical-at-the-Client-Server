@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Lab9.Controllers
+namespace Lab10.Controllers
 {
     public class SiteController : Controller
     {
@@ -74,6 +74,11 @@ namespace Lab9.Controllers
         {
             await _bookRepository.DeleteBookAsync(id);
             return StatusCode(200);
+        }
+
+        public ActionResult Menu()
+        {
+            return PartialView("Menu");
         }
     }
 }

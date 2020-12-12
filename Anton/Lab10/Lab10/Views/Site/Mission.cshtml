@@ -1,0 +1,27 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html>
+<head>
+    <title>Антоша Ткачёв</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/staticPage.css" />
+    <link rel="stylesheet" href="~/css/mission.css" />
+</head>
+<body>
+    @await Html.PartialAsync("Menu")
+    <div class="container">
+        <h1>Введите через пробел два числа</h1>
+        <input id="str" class="inputNumbers" type="text"/>
+        <button class="button" onclick="TaskClick()">Решить</button>
+        <div id="divAnswer" class="div">
+            <p class="answerText">Ответ:</p>
+            <p id="answer" class="answer"></p>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/mission.js" asp-append-version="true"></script>
+</body>
+</html>
