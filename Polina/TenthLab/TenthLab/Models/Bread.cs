@@ -1,4 +1,4 @@
-﻿namespace NinthLab
+﻿namespace TenthLab.Models
 {
     public class Bread
     {

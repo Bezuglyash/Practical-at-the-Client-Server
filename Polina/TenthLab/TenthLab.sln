@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenthLab", "TenthLab\TenthLab.csproj", "{BA017927-2A3D-4949-9E8E-02ABD478BD81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA017927-2A3D-4949-9E8E-02ABD478BD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA017927-2A3D-4949-9E8E-02ABD478BD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA017927-2A3D-4949-9E8E-02ABD478BD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA017927-2A3D-4949-9E8E-02ABD478BD81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F4CF8BC-81B2-4FCB-9406-6EA2E469487B}
+	EndGlobalSection
+EndGlobal

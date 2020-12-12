@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using TenthLab.Models;
 
-namespace NinthLab
+namespace TenthLab
 {
     public class MySiteDbContext : DbContext
     {

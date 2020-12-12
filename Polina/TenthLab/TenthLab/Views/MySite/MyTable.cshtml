@@ -1,0 +1,53 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<TenthLab.Models.Bread>
+<!doctype html>
+<html>
+<head>
+    <title>Полина Стельмах</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/myPage.css" />
+    <link rel="stylesheet" href="~/css/myTable.css" />
+</head>
+<body>
+    @await Html.PartialAsync("Menu")
+    <div class="container">
+        <div class="breads">
+            <table class="table">
+                <tr>
+                    <th class="text-center">Название</th>
+                    <th class="text-center">Изготовитель</th>
+                    <th class="text-center">Начинка</th>
+                    <th class="text-center"></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr id="@item.Id">
+                        <td id="name-@item.Id" class="text-center">@item.Name</td>
+                        <td id="manufacturer-@item.Id" class="text-center">@item.Manufacturer</td>
+                        <td id="filling-@item.Id" class="text-center">@item.Filling</td>
+                        <td class="text-center" style="text-align: center;">
+                            <button style="color: blue;" onclick="EditClick(@item.Id)">Изменить</button>
+                            <button style="color: red;" onclick="DeleteClick(@item.Id)">Удалить</button>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <button class="addBread" onclick="AddClick()">Добавить булку</button>
+    </div>
+    <div id="editContainer" class="edit" style="display: none;">
+        <div id="editData" class="editData">
+            <p>Булка</p>
+            <input id="name" type="text" placeholder="Название" />
+            <input id="manufacturer" type="text" placeholder="Изготовитель" />
+            <input id="filling" type="text" placeholder="Начинка" />
+            <button class="save" onclick="SaveClick()" style="outline: none;">Сохранить</button>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/myTable.js" asp-append-version="true"></script>
+</body>
+</html>

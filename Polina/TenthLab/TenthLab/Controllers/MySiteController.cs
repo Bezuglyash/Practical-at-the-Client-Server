@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NinthLab
+namespace TenthLab.Controllers
 {
     public class MySiteController : Controller
     {
@@ -11,6 +11,11 @@ namespace NinthLab
         public MySiteController(BreadDbWorker breadDb)
         {
             _breadDb = breadDb;
+        }
+
+        public IActionResult GetMenu()
+        {
+            return PartialView("Menu");
         }
 
         [HttpGet]

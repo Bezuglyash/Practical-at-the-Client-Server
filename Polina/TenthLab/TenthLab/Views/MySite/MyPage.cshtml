@@ -1,0 +1,24 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html>
+<head>
+    <title>Полина Стельмах</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/myPage.css" />
+</head>
+<body>
+    @await Html.PartialAsync("Menu")
+    <div class="container">
+        <div class="card">
+            <h1>Работу выполнила: Полина Стельмах</h1>
+            <h1>Номер группы: ИКБО-16-18</h1>
+            <h1>Номер индивидуального задания: 9</h1>
+            <h2>
+                Подсчет одинаковых символов. Символы должны поступать сплошным
+                текстом с разделителем.
+            </h2>
+        </div>
+    </div>
+</body>
+</html>
